@@ -1,34 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import classNames from 'classnames/bind';
+
+import styles from './App.module.scss';
+import { Switcher } from './features/switcher/Switcher';
+import { Display } from './features/display/Display';
+import { Operators } from './features/operators/Operators';
+import { Numbers } from './features/numbers/Numbers';
 
 function App() {
-  const [count, setCount] = useState(0)
+	const cx = classNames.bind(styles);
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+	return (
+		<section className={cx('calculator')}>
+			<Switcher />
+			<Display />
+			<Operators />
+			<Numbers />
+		</section>
+	);
 }
 
-export default App
+export default App;

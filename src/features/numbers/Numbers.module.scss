@@ -1,0 +1,6 @@
+.numbers {
+	padding: 4px;
+	max-width: 240px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}

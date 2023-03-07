@@ -1,0 +1,31 @@
+.button {
+	padding: 8px 12px;
+	background: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 8px;
+	transition: all 0.3s ease;
+	border: 1px solid #f3f4f6;
+	border-radius: 5px;
+	&__text {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 15px;
+		color: #4d5562;
+	}
+	&__icon {
+		height: 20px;
+		svg path {
+			transition: all 0.3s ease;
+		}
+	}
+}
+.active {
+	background: #ffffff;
+	border: 1px solid #e2e3e5;
+}
+.active svg path {
+	stroke: #5d5fef;
+}
